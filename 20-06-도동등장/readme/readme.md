@@ -13,6 +13,8 @@
 
 ## 2. 개발 환경
 
+![](img/40.png)
+
 - Python Web Framework
   - Django 2.1.15
   - Python 3.7 + 
