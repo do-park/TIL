@@ -36,6 +36,11 @@
   - Client ID, Client Secert는 Resource Server에서 발급
   - Authorized redirect url은 Client에서 등록, 이 url이 아닌 다른 url로부터 요청이 들어온다면 Resource Server는 해당 요청을 무시
 
+- 보안 취약점
+  1. CSRF 공격을 통한 계정 탈취
+  2. Covert Redirect
+      - 인증 FLOW 중 redirect_uri 파라미터 값에 대해 검증이 누락되거나 미흡할 경우
+
 
 
 [출처] https://meetup.toast.com/posts/105
