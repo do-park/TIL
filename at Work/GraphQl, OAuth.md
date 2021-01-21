@@ -2,6 +2,8 @@
 
 # graphQL
 
+> SQL처럼 데이터의 집합에서 특정 데이터를 불러오는 데이터 질의 언어(data query language)
+
 **graphQL이 해결할 수 있는 문제**
 
 1. Over-fetching
