@@ -19,30 +19,17 @@
 
 # OAuth 2.0
 
-- 다양한 플랫폼 환경에서 권한 부여를 위한 산업 표준 프로토콜
+**승인 방식의 종류**
 
-  - AccessToken을 발급받아, 그 토큰을 기반으로 원하는 기능을 구현
-
-- 용어 설명
-
-  - Resource Owner: 개인정보의 소유자
-  - Client: 제3의 서비스
-  - Resource Server: API서버, Resource Owner 관련 정보를 제공하는 서버
-  - Authorization Server: 권한 부여 서버, 로그인을 통해 인증 후 권한을 부여
-  - Authentication Server: 실제로 로그인 서비스를 제공하는 서버
-
-- AccessToken 발급을 위해 발급받고자하는 사이트에 우리의 서버를 등록
-
-  - 등록하는 과정은 사이트마다 다르지만 Client ID, Client Secert, Authorized redirect urls는 반드시 필요
-
-  - Client ID, Client Secert는 Resource Server에서 발급
-  - Authorized redirect url은 Client에서 등록, 이 url이 아닌 다른 url로부터 요청이 들어온다면 Resource Server는 해당 요청을 무시
-
-- 보안 취약점
-  1. CSRF 공격을 통한 계정 탈취
-  2. Covert Redirect
-      - 인증 FLOW 중 redirect_uri 파라미터 값에 대해 검증이 누락되거나 미흡할 경우
+- Authorization Code Grant Type: 권한 부여 코드 승인 타입
+- 클라이언트가 다른 사용자 대신 특정 리소스에 접근을 요청할 때 사용. 리소스 접근을 위한 사용자 명과 비밀번호, 권한 서버에 요청해서 받은 권한 코드를 함께 활용하여 리소스에 대한 액세스 토큰을 받는 방식
+- Implicit Grant Type: 암시적 승인
+  - 권한 부여 코드 승인 타입과 다르게 권한 코드 교환 단계 없이 액세서 토큰을 즉시 반환받아 이를 인증에 이용하는 방식
+- Resource Owner Password Credentials Grant Type: 리소스 소유자 암호 자격 증명 타입
+  - 클라이언트가 암호를 사용하여 액세스 토큰에 대한 사용자의 자격 증명을 교환
+- Client Credentials Grant Type: 클라이언트 자격 증명 타입
+  - 클라이언트가 컨텍스트 외부에서 액세스 토큰을 얻어 특정 리소스에 접근을 요청할 때 사용하는 방식
 
 
 
-[출처] https://meetup.toast.com/posts/105
+[출처] https://cheese10yun.github.io/spring-oauth2-provider/
