@@ -22,4 +22,12 @@
   - JSON 포맷의 문자열을 객체로 변환한다. 서버로부터 클라이언트에게 전송된 JSON 데이터는 문자열이다. 이 문자열을 객체로서 사용하려면 JSON 포맷의 문자열을 객체화해야 하는데 이를 역직렬화라 한다.
 
 ### 3. XMLHttpRequest
-p.854
+- 자바스크립트를 사용해 HTTP 요청을 전송하려면 XMLHttpRequest 객체를 사용한다. Web API인 XMLHttpRequest 객체는 HTTP 요청 전송과 HTTP 응답 수신을 위한 다양한 메서드와 프로퍼티를 제공한다.
+1. XMLHttpRequest 객체 생성
+2. XMLHttpRequest 객체의 프로퍼티와 메서드
+3. HTTP 요청 전송
+  1. XMLHttpRequest.prototype.open 메서드로 HTTP 요청을 초기화한다.
+  2. 필요에 따라 XMLHttpRequest.prototype.setRequestHeader 메서드로 특정 HTTP 요청의 헤더 값을 설정한다.
+  3. XMLHttpRequest.prototype.send 메서드로 HTTP 요청을 전송한다.
+4. HTTP 응답 처리
+  - 서버가 전송한 응답을 처리하려면 XMLHttpRequest 객체가 발생시키는 이벤트를 캐치해야 한다.
